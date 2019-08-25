@@ -5,7 +5,7 @@ require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
 
-local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local battery_widget = require("widgets.battery-widget.battery")
 local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 
@@ -52,7 +52,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/perfect-igor/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
