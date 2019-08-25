@@ -2,12 +2,13 @@
 
 ### Базовая информация
 Расположение основного файла конфигурации:
-`$XDB`
-(Debian): `XDB`
-
+`/etc/xdg/awesome/rc.lua`
 
 Желательно скопировать в `~/.confic/awesome/`:
-`cp ~/.confic/awesome/` 
+```
+mkdir -p ~/.config/awesome/
+cp /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
+``` 
 
-После изменения конфигурации:
+После изменения конфигурации (awesome restart):
 `ctrl + win + R`
