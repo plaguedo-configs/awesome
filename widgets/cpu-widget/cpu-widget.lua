@@ -15,8 +15,8 @@ local cpugraph_widget = wibox.widget {
     max_value = 100,
     background_color = "#00000000",
     forced_width = 50,
-    step_width = 2,
-    step_spacing = 1,
+    step_width = 1,
+    step_spacing = 0,
     widget = wibox.widget.graph,
     color = "linear:0,0:0,22:0,#FF0000:0.3,#FFFF00:0.5,#74aeab"
 }
