@@ -18,7 +18,7 @@ local battery_widget = wibox.widget {
         widget = wibox.widget.imagebox,
         resize = false
     },
-    layout = wibox.container.margin(_, 3, 0, 4)
+    layout = wibox.container.margin(_, 0, 0, 4)
 }
 
 -- Popup with battery info

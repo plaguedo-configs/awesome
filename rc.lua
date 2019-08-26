@@ -12,6 +12,8 @@ local battery_widget = require("widgets.battery-widget.battery")
 local cpu_widget = require("widgets.cpu-widget.cpu-widget")
 local ram_widget = require("widgets.ram-widget.ram-widget")
 
+local separator = wibox.widget.textbox()
+separator:set_text(" : ")
 
 
 
@@ -237,9 +239,9 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            cpu_widget,
-            ram_widget,
-            battery_widget,
+            cpu_widget, separator,
+            ram_widget, separator,
+            battery_widget, separator,
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
