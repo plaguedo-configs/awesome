@@ -3,7 +3,12 @@ local naughty = require("naughty")
 local watch = require("awful.widget.watch")
 local wibox = require("wibox")
 
-local PATH_TO_ICONS = "/usr/share/icons/Arc/status/symbolic/"
+local gfs = require("gears.filesystem")
+
+local theme_name = "perfect-igor"
+local theme_path = gfs.get_configuration_dir() .. "themes/" .. theme_name .. "/"
+
+local PATH_TO_ICONS = theme_path .. "icons/symbolic/"
 local HOME = os.getenv("HOME")
 
 local battery_widget = wibox.widget {
@@ -58,6 +63,18 @@ local last_battery_check = os.time()
 
 watch("acpi -i", 10,
     function(widget, stdout, stderr, exitreason, exitcode)
+        naughty.notify{
+            icon = HOME .. "/.config/awesome/nichosi.png",
+            icon_size=100,
+            text = stderr,
+            title = "Battery is dying",
+            timeout = 5, hover_timeout = 0.5,
+            position = "bottom_right",
+            bg = "#F06060",
+            fg = "#EEE9EF",
+            width = 300,
+        }
+
         local batteryType
 
         local battery_info = {}

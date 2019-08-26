@@ -1,19 +1,22 @@
--- Standard awesome library
+-- Стандартные библиотеки awesome
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
--- Widget and layout library
-local wibox = require("wibox")
 
+-- Библиотеки Widget и layout
+local wibox = require("wibox")
+--local vicious = require("vicious") -- TODO: Add
+
+-- Свои виджеты
 local battery_widget = require("widgets.battery-widget.battery")
 local cpu_widget = require("widgets.cpu-widget.cpu-widget")
 
 
 
---local vicious = require("vicious")
--- Theme handling library
+
+-- Библиотека для управления темой
 local beautiful = require("beautiful")
--- Notification library
+-- Библиотека оповещений
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
@@ -116,7 +119,7 @@ popular = {
     { "VS Code", "code" }
 }
 
-mymainmenu = awful.menu({ items = { { "popular", popular },
+mymainmenu = awful.menu({ items = { { "popular", popular, beautiful.planet_icon },
                                     { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Debian", debian.menu.Debian_menu.Debian },
                                     { "open terminal", terminal }  
@@ -233,12 +236,11 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            cpu_widget,
+            battery_widget,
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
-            ram_widget,
-            cpu_widget,
-            battery_widget,
             s.mylayoutbox,
         },
     }

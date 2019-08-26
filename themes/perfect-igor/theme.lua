@@ -85,20 +85,25 @@ theme.awful_widget_margin_top               = 2
 theme.mouse_finder_color = "#CC9393"
 -- mouse_finder_[timeout|animate_timeout|radius|factor]
 
--- theme.menu_bg_normal    = ""
+
+-- Меню - то, что открывается по ПКМ на рабочем столе
+-- или по ЛКМ на иконку Awesome в левом верхнем углу
+
 -- theme.menu_bg_focus     = ""
--- theme.menu_fg_normal    = ""
 -- theme.menu_fg_focus     = ""
 -- theme.menu_border_color = ""
 -- theme.menu_border_width = ""
-theme.menu_height       = "16"
+theme.menu_height       = "20"
 theme.menu_width        = "140"
+theme.menu_bg_normal    = black .. "64"
+theme.menu_fg_normal    = lgrey
 
 --{{--- Theme icons ------------------------------------------------------------------------------------------
 
-theme.awesome_icon                              = theme_path .. "icons/powerarrow/awesome-icon.png"
+theme.awesome_icon                              = theme_path .. "icons/perfect-igor/blackhole.png"
+theme.planet_icon                               = theme_path .. "icons/perfect-igor/planet.png"
+
 theme.clear_icon                                = theme_path .. "icons/powerarrow/clear.png"
--- theme.clear_icon                                = theme_path .. "icons/powerarrow/llauncher.png"
 theme.menu_submenu_icon                         = theme_path .. "icons/powerarrow/submenu.png"
 theme.tasklist_floating_icon                    = theme_path .. "icons/powerarrow/floatingm.png"
 theme.titlebar_close_button_focus               = theme_path .. "icons/powerarrow/close_focus.png"
