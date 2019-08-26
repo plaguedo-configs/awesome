@@ -18,7 +18,7 @@ white = "#ffffff"
 
 theme = {}
 
-theme.wallpaper_cmd = { "awsetbg " .. theme_path .. "wallpapers/anime-3.jpg" }
+theme.wallpaper = theme_path .. "wallpapers/anime-3.jpg"
 
 theme.font                                  = "Terminus 9"
 theme.fg_normal                             = "#AAAAAA"
