@@ -6,8 +6,7 @@ require("awful.autofocus")
 local wibox = require("wibox")
 
 local battery_widget = require("widgets.battery-widget.battery")
-local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
-local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local cpu_widget = require("widgets.cpu-widget.cpu-widget")
 
 
 
