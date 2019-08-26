@@ -10,6 +10,7 @@ local wibox = require("wibox")
 -- Свои виджеты
 local battery_widget = require("widgets.battery-widget.battery")
 local cpu_widget = require("widgets.cpu-widget.cpu-widget")
+local ram_widget = require("widgets.ram-widget.ram-widget")
 
 
 
@@ -237,6 +238,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             cpu_widget,
+            ram_widget,
             battery_widget,
             mykeyboardlayout,
             wibox.widget.systray(),
