@@ -1,11 +1,5 @@
 -------------------------------------------------
--- CPU Widget for Awesome Window Manager
--- Shows the current CPU utilization
--- More details could be found here:
--- https://github.com/streetturtle/awesome-wm-widgets/tree/master/cpu-widget
-
--- @author Pavel Makhov
--- @copyright 2019 Pavel Makhov
+-- based on https://github.com/streetturtle/awesome-wm-widgets/tree/master/cpu-widget
 -------------------------------------------------
 
 local watch = require("awful.widget.watch")
