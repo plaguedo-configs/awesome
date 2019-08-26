@@ -38,7 +38,7 @@ local function show_battery_status()
     )
 end
 
-local function show_battery_status()
+local function show_power_supply()
     notification = naughty.notify{
         text =  "Питание от постоянного источника",
         title = "Battery status",
@@ -139,7 +139,7 @@ awful.spawn.with_line_callback("acpi", {
     stderr = function(line)
         if string.match(line, "No support for device type: power_supply") then
             battery_widget.icon:set_image(PATH_TO_ICONS .. POWER_SUPPLY_ICON)
-            battery_widget:connect_signal("mouse::enter", function() show_battery_status() end)
+            battery_widget:connect_signal("mouse::enter", function() show_power_supply() end)
             battery_widget:connect_signal("mouse::leave", function() naughty.destroy(notification) end)
         end
     end,
